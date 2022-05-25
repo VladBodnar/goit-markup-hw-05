@@ -466,12 +466,7 @@ color: #FFFFFF;
 
 .filter-btn:hover,
 .filter-btn:focus {
- /* font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-  letter-spacing: 0.03em;*/
+ 
   color: var(--secondary-txt-cl);
   background: var(--btn-bg-cl);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -502,6 +497,10 @@ color: #FFFFFF;
 .page-link:focus {
   display: block;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.page-link:hover .page-overlay {
+  transform: translatey(0);
 }
 
 .page-item:nth-child(-n + 6) {
@@ -535,6 +534,33 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   color: var(--main-txt-cl);
 }
 
+.page-img {
+  position: relative;   
+  overflow: hidden;
+}
+ 
+
+  .page-overlay {   
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;    
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translatey(+101%);
+  transition: transform 250ms ease;
+  }
+
+  .page-overlay>p {   
+  padding: 56px 24px 70px 24px;
+  font-size: 18px;
+  line-height: 1.56;      
+  letter-spacing: 0.03em;     
+  color: #FFFFFF;
+    }
+
+ 
+  
 /*Клиенты*/
 
 .clients-section {
